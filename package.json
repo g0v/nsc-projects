@@ -1,0 +1,26 @@
+{
+  "author": "Kirby Wu",
+  "name": "nsc-projects.gh-pages",
+  "description": "visualization of various nsc-projects information",
+  "version": "0.0.1",
+  "homepage": "https://github.com/g0v/nsc-projects",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/g0v/nsc-projects"
+  },
+  "engines": {
+    "node": ">=0.8.18",
+    "npm": ">=1.2.2"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/lsc server.ls"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "LiveScript": ">=1.2.0",
+    "jade": ">=0.27.6",
+    "sass": ">=0.5.0",
+    "node-sass": ">=0.7.0",
+    "chokidar": ">=0.8.0"
+  }
+}
