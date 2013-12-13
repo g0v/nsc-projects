@@ -14,6 +14,7 @@ Data Files
 ============
 * nsc\_projects.csv 包含78~102年度的專題研究/其他補助/委辦/代辦案, 付有各案的核定金額, 學門及子類, 機關及主持人名, 執行期間與以及計劃名稱, 並以 csv (逗點分隔純文字檔) 儲存.
 * budget.json 包含 78~102年度以單位分類所申請金額組總合的雜湊表.
+* please check category-mapping.txt for 案別, 學門 and 子類別 definition mapping table.
 
 
 Crawler
