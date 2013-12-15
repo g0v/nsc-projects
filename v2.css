@@ -1,0 +1,15 @@
+g > .label {
+  display: none;
+}
+g.appear > .label {
+  display: block;
+}
+.button {
+  display: inline-block;
+  color: #FFFFFF;
+  background: #555;
+  padding: 5px;
+  margin: 0 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
