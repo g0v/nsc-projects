@@ -1,7 +1,7 @@
 !!!5
 //- basic libraries: jquery(1.10.2), d3js(3.3.11), angularjs(1.2.3), bootstrap(3.0)/semantic-ui(0.9.3/0.9.5)
 - var usecdn = true
-- var lib = { jquery: true, d3js: true, angular: false, bootstrap: false, semantic: false}
+- var lib = { jquery: true, d3js: true, angular: false, bootstrap: false, semantic: true}
 - var assets = "/assets"
 html
   head
@@ -14,9 +14,12 @@ html
     script(type="text/javascript",src="v2.js")
   body(ng-app,ng-controller="budgetCtrl")
     div#header
-      h2.title 國科會計畫補助金額-各校資源比例比例差多少？
-      div#prev.button 上一頁
-      div#expand.button 展開
-      div#collapse.button 收合
-      div#next.button 下一頁
+      p.desc 從1993年至今，將近千兆元的國科會補助發給各大專院校，其中前面 5%(待確認) 的學校申請下來的經費加總，超過後面 95%(待確認) 的學校。申請的學校一排下來，大家心目中的「好」學校總是在研究補助經費上名列前茅...
+      div.nav
+        h2.title 你的學校還在排隊申請國科會嗎？
+        i#prev.circular.icon.double.angle.left.link
+        i#next.circular.icon.double.angle.right.link
+      div.op
+        i#expand.resize.full.icon.link 展開
+        i#collapse.resize.small.icon.link 收合
     div#visual

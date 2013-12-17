@@ -1,15 +1,43 @@
-g > .label {
-  display: none;
+body {
+  font-family: '\5FAE\8F6F\96C5\9ED1','微軟正黑體', Calibri, Arial, sans-serif;
 }
-g.appear > .label {
-  display: block;
+p.desc {
+  margin: 0 auto;
+  width: 60%;
 }
-.button {
-  display: inline-block;
-  color: #FFFFFF;
-  background: #555;
-  padding: 5px;
-  margin: 0 20px;
+.nav {
+  position: relative;
+  height: 60px;
+  border-bottom: 1px solid #EFEFEF;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+i.icon {
   cursor: pointer;
-  border-radius: 5px;
+}
+.nav i.icon {
+  position: absolute;
+  display: inline-block;
+  padding: 5px;
+  font-size: 30px;
+  top: 0;
+}
+.nav h2.title {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+#prev {
+  left: 50px;
+}
+#next {
+  right: 50px;
+}
+div.op {
+  position: absolute;
+  left: 30px;
+}
+div.op i.icon {
+  font-size: 16px;
+  margin: 3px 5px;
 }
