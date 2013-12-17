@@ -1,6 +1,6 @@
 url = \budget.json
 x = y = 250
-screenw = window.screen.width
+screenw = 930
 position = 0
 
 org <- d3.json url
@@ -22,7 +22,9 @@ for name of org => do
 
 max = d3.max amount
 min = d3.min amount
-amount = null
+sum = d3.sum amount
+console.log max
+console.log sum
 scale = d3.scale.linear!
   .domain [0, vmax]
   .range [0, y]
@@ -75,11 +77,11 @@ svg.selectAll \g.lg
           .attr \y -> (scale Math.sqrt &0)*0.5 + 5
           .text ->
             if &0 >= 10000000
-              '100兆'
-            else if  &0 >= 1000000 
-              '10兆'
+              '十兆'
+            else if  &0 >= 1000000
+              '一兆'
             else
-              '1兆'
+              '千億'
 
 #function
 expand = ->

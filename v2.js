@@ -3,10 +3,10 @@
   var url, x, y, screenw, position;
   url = 'budget.json';
   x = y = 250;
-  screenw = window.screen.width;
+  screenw = 930;
   position = 0;
   d3.json(url, function(org){
-    var color, svg, data, amount, vmax, name, a, max, min, scale, x$, y$, expand, collapse, pagerNext, pagerPrev, pagerReset;
+    var color, svg, data, amount, vmax, name, a, max, min, sum, scale, x$, y$, expand, collapse, pagerNext, pagerPrev, pagerReset;
     color = d3.scale.ordinal().range(['#5782c8', '#d08edd', '#4c6fc8', '#e8b0e6']);
     svg = d3.select('#visual').append('svg').append('g').attr('id', 'circles').attr('transform', 'translate(0,0)');
     data = [];
@@ -26,7 +26,9 @@
     }
     max = d3.max(amount);
     min = d3.min(amount);
-    amount = null;
+    sum = d3.sum(amount);
+    console.log(max);
+    console.log(sum);
     scale = d3.scale.linear().domain([0, vmax]).range([0, y]);
     data.sort(function(){
       return d3.descending(arguments[0].v, arguments[1].v);
@@ -67,11 +69,11 @@
       return scale(Math.sqrt(arguments[0])) * 0.5 + 5;
     }).text(function(){
       if (arguments[0] >= 10000000) {
-        return '100兆';
+        return '十兆';
       } else if (arguments[0] >= 1000000) {
-        return '10兆';
+        return '一兆';
       } else {
-        return '1兆';
+        return '千億';
       }
     });
     expand = function(){
